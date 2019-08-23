@@ -84,6 +84,16 @@
                         </aside>
                     </section>
                     <section>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/PmlRbfSavbI?start=29"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </section>
+                    <section>
                         <img data-src="./lib/images/glitter-bomb-mark-rober.jpg" />
 
                         <aside class="notes">
@@ -95,6 +105,16 @@
                         </aside>
                     </section>
                     <section>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/xoxhDk-hwuo?start=29"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </section>
+                    <section>
                         <img data-src="./lib/images/rockskip.jpg" />
 
                         <aside class="notes">
@@ -103,6 +123,16 @@
                                 <li>taught family scientific method</li>
                             </ul>
                         </aside>
+                    </section>
+                    <section>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/M0_U1FHwACk?start=111"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
                     </section>
                 </section>
 
@@ -558,16 +588,11 @@
                                 
                                 const proto = new foo;
                                 
-                                /*
-                                The previous could also be done like this...
-                                const proto = Object.create(foo.prototype);
-                                */
-                                
                                 function bar(){}
                                 
                                 bar.prototype = proto;
                                 
-                                proto.bar_prop = function() {
+                                bar.prototype.bar_prop = function() {
                                     console.log("bar val");
                                 }
                                 
