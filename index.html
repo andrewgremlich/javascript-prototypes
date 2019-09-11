@@ -36,6 +36,26 @@
                     </aside>
                 </section>
 
+                <section data-background-color="#d38f45">
+                    <section>
+                        <h3>Who am I?</h3>
+                        <p>Graduated BYU-Idaho December 2016</p>
+                        <p>Major was Web Design and Development</p>
+                        <p>First job GM in Austin Texas</p>
+                        <p>I enjoy hikes, games, and books!</p>
+                    </section>
+
+                    <section>
+                        <p><a style="color: darkblue;" href="https://github.com/andrewgremlich">Github Profile</a></p>
+                        <p>
+                            <a style="color: darkblue;" href="https://www.linkedin.com/in/agremlich/">
+                                LinkedIn Profile
+                            </a>
+                        </p>
+                        <p><a style="color: darkblue;" href="https://twitter.com/AndrewGremlich">Twitter Profile</a></p>
+                    </section>
+                </section>
+
                 <section data-background-color="#408799">
                     Engineering and Prototyping
 
@@ -246,8 +266,8 @@
                                 console.log({
                                     a: 1,
                                     b: 2,
-                                    c: c
-                                }.hasOwnProperty(a));
+                                    c: 3
+                                }.hasOwnProperty("a"));
                                 //logs true;
                             ```
                             <aside class="notes">
@@ -577,6 +597,10 @@
                         Prototypal Inheritance
                     </section>
 
+                    <section>
+                        Function constructors
+                    </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ```js
@@ -610,6 +634,10 @@
                         </textarea>
                     </section>
 
+                    <section>
+                        Plain Old JavaScript Object.
+                    </section>
+
                     <section data-markdown>
                         <textarea data-template>
                             ```js
@@ -627,10 +655,47 @@
                             </aside>
                         </textarea>
                     </section>
+
+                    <section>
+                        Using `Object.create()`
+                    </section>
+
+                    <section data-markdown>
+                        <textarea data-template>
+                            ```js
+                                const shape = {
+                                    width: function() {
+                                        return this.element.offsetWidth + "px";
+                                    },
+                                    height: function() {
+                                        return this.element.offsetWidth + "px";
+                                    },
+                                    radius: function() {
+                                        return parseInt(this.width()) / 2 + "px";
+                                    }
+                                };
+                              
+                              const baseMethods = Object.create(shape);
+
+                              baseMethods.centerX = function() {
+                                return this.element.offsetLeft + parseInt(this.width()) / 2;
+                              };
+                              baseMethods.centerY = function() {
+                                return (this.element.offsetTop + parseInt(this.height()) / 2);
+                              };
+                              
+                              const main = Object.create(baseMethods);
+                            ```
+                        </textarea>
+                    </section>
+
+                    <section>
+                        There are several ways to do things!  I have just shown a few.
+                    </section>
                 </section>
 
                 <section>
-                    Code already!
+                    Do a code demonstration already!
                 </section>
 
                 <section>
